@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <pthread.h>
 #include <unistd.h>
+
 int i=0;
 void* thread_func(void* arg){
 	pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, NULL);
