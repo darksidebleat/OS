@@ -17,7 +17,7 @@ void* thread_func(void* arg){
 int main(int argc, char * argv[]){
 	pthread_t thread;
 	pthread_create(&thread, NULL, thread_func,NULL);
-	while(i<1) sleep(1);
+	while(i<1) usleep(1);
 	pthread_cancel(thread);
 	printf("Requested to cancel the thread\n");
 	pthread_join(thread, NULL);
