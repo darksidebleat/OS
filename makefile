@@ -1,2 +1,6 @@
+first.o:
+	g++ -D_REENTERANT -lpthread -c lab3.cpp
 all:
-  pytron -m unittest discover -s tutorial -p *Test.py && git add . && git commit -m "1" && git push origin lab3
+	g++ -pthread lab3.o -o lab3
+clean:
+	rm -R lab3.o
